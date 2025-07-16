@@ -43,4 +43,7 @@ def generate_resume():
 
 # 👇👇 THIS PART IS CRUCIAL 👇👇
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # use Render's assigned port
+    app.run(debug=True, host='0.0.0.0', port=port)
+

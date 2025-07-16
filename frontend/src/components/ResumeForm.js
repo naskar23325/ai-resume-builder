@@ -23,7 +23,7 @@ function ResumeForm() {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://ai-resume-backend.onrender.com/generate-resume', {
+      const response = await axios.post('https://ai-resume-builder-tpel.onrender.com/generate-resume', {
         ...formData,
         skills: formData.skills.split(',').map(s => s.trim())
       });
